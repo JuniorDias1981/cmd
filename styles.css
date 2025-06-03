@@ -1,0 +1,193 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  color: #fff;
+}
+
+header {
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Alerta de segurança destacado */
+.alerta-seguranca {
+  background-color: #ff4d4d;
+  color: white;
+  font-weight: bold;
+  padding: 16px;
+  border-radius: 8px;
+  border: 2px solid #cc0000;
+  margin: 20px 0;
+  box-shadow: 0 0 10px rgba(204, 0, 0, 0.6);
+  max-width: 700px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h1, h2 {
+  margin-bottom: 10px;
+}
+
+.command-container {
+  margin-bottom: 40px;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+
+.command-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.command {
+  flex: 1 1 250px;
+  background: #2c2c3c;
+  padding: 16px;
+  border-radius: 10px;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.command:hover {
+  transform: scale(1.03);
+  background: #3c3c4f;
+}
+
+button.copy-btn {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button.copy-btn:hover {
+  background-color: #45a049;
+}
+
+.script-generator {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+#downloadButton {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #2196F3;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+#downloadButton:hover {
+  background-color: #1976D2;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  font-size: 0.9em;
+}
+
+#toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #00c853;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  display: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  animation: fadeInOut 3s ease forwards;
+}
+
+@keyframes fadeInOut {
+  0% {opacity: 0; transform: translateY(10px);}
+  10% {opacity: 1; transform: translateY(0);}
+  90% {opacity: 1;}
+  100% {opacity: 0; transform: translateY(10px);}
+}
+.memory-type-info {
+  background-color: #1f1c2c;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.memory-type-info table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+
+.memory-type-info th,
+.memory-type-info td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.memory-type-info th {
+  background-color: #333;
+  color: #fff;
+}
+.comando-explicacao {
+  max-width: 800px;
+  margin: 2em auto;
+  padding: 1.5em;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.comando-explicacao h3 {
+  text-align: center;
+  margin-bottom: 1em;
+  color: #222;
+}
+
+.comando-explicacao ul {
+  list-style: disc;
+  padding-left: 2em;
+}
+
+.comando-explicacao li {
+  margin-bottom: 1em;
+  line-height: 1.6;
+}
+
+.comando-explicacao code {
+  background-color: #eee;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: monospace;
+}
