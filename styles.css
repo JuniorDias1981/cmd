@@ -107,9 +107,10 @@ button.copy-btn:hover {
 
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 1em;
   background: #111;
   font-size: 0.9em;
+  color: #fffefe;
 }
 
 #toast {
