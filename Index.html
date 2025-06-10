@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Comandos CMD e PowerShell para diagnóstico, manutenção e otimização do seu PC. Tutoriais fáceis e scripts prontos para copiar e baixar." />
+  <title>Comandos CMD e PowerShell - Diagnóstico e Manutenção</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+
+<body>
+  <header>
+  <div class="header-content">
+    <img src="imagens/logo.png" alt="Logo JR Manutenção" class="logo">
+    <h1>Comandos CMD e PowerShell para Diagnóstico</h1>
+  </div>
+</header>
+
+  <div class="alerta-seguranca">
+    <p><strong>Como abrir o CMD</strong><br><br>
+      ✅ <strong>Passo 1: Abrir o CMD (Prompt de Comando)</strong><br>
+      Clique no botão Iniciar (com o símbolo do Windows).<br>
+      Digite: <code>cmd</code> e selecione "Prompt de Comando".<br><br>
+      ✅ <strong>Passo 2: Digitar o comando</strong><br>
+      Com o CMD aberto, digite ou cole os comandos abaixo.<br><br>
+      ⚠️ <strong>O uso incorreto pode danificar o sistema.</strong>
+    </p>
+  </div>
+
+  <main>
+    <section class="command-container">
+      <h2>Comandos para Diagnóstico</h2>
+
+      <div class="command">
+        <div class="cmd-box">wmic cpu get name</div>
+        <p>Mostra o nome/modelo do processador.</p>
+        <button class="copy-btn" data-command="wmic cpu get name">📋 Copiar</button>
+        <button class="download-btn" data-command="wmic cpu get name">⬇️ Baixar .BAT</button>
+      </div>
+
+      <div class="command">
+        <div class="cmd-box">wmic memorychip get DeviceLocator, Capacity, Speed, MemoryType</div>
+        <p>Exibe slot, capacidade, velocidade e tipo da RAM.</p>
+        <button class="copy-btn" data-command="wmic memorychip get DeviceLocator, Capacity, Speed, MemoryType">📋 Copiar</button>
+        <button class="download-btn" data-command="wmic memorychip get DeviceLocator, Capacity, Speed, MemoryType">⬇️ Baixar .BAT</button>
+      <ul>
+            <li><strong>DeviceLocator</strong>: Slot onde o módulo está instalado.</li>
+            <li><strong>Capacity</strong>: Capacidade de cada módulo (em bytes).</li>
+            <li><strong>Speed</strong>: Velocidade em MHz.</li>
+            <li><strong>MemoryType</strong>: Tipo da memória (DDR2, DDR3, DDR4, etc.). O número retornado precisa ser interpretado com base na tabela abaixo.</li>
+          </ul>
+        </p>
+         <section class="memory-type-info">
+        <h4>🧠 Códigos de MemoryType e seus significados</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Tipo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>20</td><td>DDR</td></tr>
+            <tr><td>21</td><td>DDR2</td></tr>
+            <tr><td>24</td><td>DDR3</td></tr>
+            <tr><td>26</td><td>DDR4</td></tr>
+            <tr><td>0</td><td>Desconhecido</td></tr>
+            <tr><td>1</td><td>Outro</td></tr>
+          </tbody>
+        </table>
+      </section>
+      </div>
+
+      <div class="command">
+        <div class="cmd-box">wmic diskdrive get model, size</div>
+        <p>Mostra o modelo e tamanho dos discos.</p>
+        <button class="copy-btn" data-command="wmic diskdrive get model, size">📋 Copiar</button>
+        <button class="download-btn" data-command="wmic diskdrive get model, size">⬇️ Baixar .BAT</button>
+      </div>
+
+      <div class="command">
+        <div class="cmd-box">wmic baseboard get product, Manufacturer</div>
+        <p>Exibe a placa-mãe.</p>
+        <button class="copy-btn" data-command="wmic baseboard get product, Manufacturer">📋 Copiar</button>
+        <button class="download-btn" data-command="wmic baseboard get product, Manufacturer">⬇️ Baixar .BAT</button>
+      </div>
+
+      <div class="command">
+        <div class="cmd-box">dxdiag</div>
+        <p>Abre a ferramenta de diagnóstico DirectX.</p>
+        <button class="copy-btn" data-command="dxdiag">📋 Copiar</button>
+        <button class="download-btn" data-command="dxdiag">⬇️ Baixar .BAT</button>
+      </div>
+
+      <div class="command">
+        <div class="cmd-box">driverquery</div>
+        <p>Lista todos os drivers instalados.</p>
+        <button class="copy-btn" data-command="driverquery">📋 Copiar</button>
+        <button class="download-btn" data-command="driverquery">⬇️ Baixar .BAT</button>
+      </div>
+
+      <div class="command">
+        <div class="cmd-box">PowerShell: Get-WmiObject MSAcpi_ThermalZoneTemperature</div>
+        <p>Exibe temperatura da CPU (pode falhar).</p>
+        <button class="copy-btn" data-command="Get-WmiObject MSAcpi_ThermalZoneTemperature -Namespace root/wmi | Select CurrentTemperature">📋 Copiar</button>
+        <button class="download-btn" data-command="powershell -Command \"Get-WmiObject MSAcpi_ThermalZoneTemperature -Namespace root/wmi | Select CurrentTemperature\"">⬇️ Baixar .BAT</button>
+      </div>
+      <div class="command">
+  <div class="cmd-box">ipconfig /all</div>
+  <p>Exibe todos os detalhes da rede, incluindo MAC, IP, DNS e DHCP.</p>
+  <button class="copy-btn" data-command="ipconfig /all">📋 Copiar</button>
+  <button class="download-btn" data-command="ipconfig /all">⬇️ Baixar .BAT</button>
+</div>
+
+<div class="command">
+  <div class="cmd-box">ping www.google.com</div>
+  <p>Testa a conexão com a internet e o tempo de resposta.</p>
+  <button class="copy-btn" data-command="ping www.google.com">📋 Copiar</button>
+  <button class="download-btn" data-command="ping www.google.com">⬇️ Baixar .BAT</button>
+</div>
+
+<div class="command">
+  <div class="cmd-box">netstat -an</div>
+  <p>Exibe todas as conexões de rede ativas e suas portas.</p>
+  <button class="copy-btn" data-command="netstat -an">📋 Copiar</button>
+  <button class="download-btn" data-command="netstat -an">⬇️ Baixar .BAT</button>
+</div>
+
+<div class="command">
+  <div class="cmd-box">tasklist</div>
+  <p>Lista todos os processos ativos no sistema (semelhante ao Gerenciador de Tarefas).</p>
+  <button class="copy-btn" data-command="tasklist">📋 Copiar</button>
+  <button class="download-btn" data-command="tasklist">⬇️ Baixar .BAT</button>
+</div>
+
+<div class="command">
+  <div class="cmd-box">systeminfo</div>
+  <p>Exibe informações detalhadas do sistema, como nome do PC, build do Windows e memória.</p>
+  <button class="copy-btn" data-command="systeminfo">📋 Copiar</button>
+  <button class="download-btn" data-command="systeminfo">⬇️ Baixar .BAT</button>
+</div>
+
+<div class="command">
+  <div class="cmd-box">cleanmgr</div>
+  <p>Abre o utilitário de limpeza de disco do Windows.</p>
+  <button class="copy-btn" data-command="cleanmgr">📋 Copiar</button>
+  <button class="download-btn" data-command="cleanmgr">⬇️ Baixar .BAT</button>
+</div>
+
+<div class="command">
+  <div class="cmd-box">ipconfig /flushdns</div>
+  <p>Limpa o cache de DNS (útil para resolver problemas de rede).</p>
+  <button class="copy-btn" data-command="ipconfig /flushdns">📋 Copiar</button>
+  <button class="download-btn" data-command="ipconfig /flushdns">⬇️ Baixar .BAT</button>
+</div>
+
+<div class="command">
+  <div class="cmd-box">del /q /f /s %TEMP%\*</div>
+  <p>Remove todos os arquivos temporários do sistema.</p>
+  <button class="copy-btn" data-command="del /q /f /s %TEMP%\*">📋 Copiar</button>
+  <button class="download-btn" data-command="del /q /f /s %TEMP%\*">⬇️ Baixar .BAT</button>
+</div>
+
+<div class="command">
+  <div class="cmd-box">wsreset</div>
+  <p>Limpa o cache da Microsoft Store (resolve problemas de instalação).</p>
+  <button class="copy-btn" data-command="wsreset">📋 Copiar</button>
+  <button class="download-btn" data-command="wsreset">⬇️ Baixar .BAT</button>
+</div>
+
+<div class="command">
+  <div class="cmd-box">defrag C: /O</div>
+  <p>Desfragmenta e otimiza a unidade C: (melhora desempenho em HDD).</p>
+  <button class="copy-btn" data-command="defrag C: /O">📋 Copiar</button>
+  <button class="download-btn" data-command="defrag C: /O">⬇️ Baixar .BAT</button>
+</div>
+
+<div class="command">
+  <div class="cmd-box">DISM /Online /Cleanup-Image /StartComponentCleanup</div>
+  <p>Limpa atualizações antigas do Windows para liberar espaço.</p>
+  <button class="copy-btn" data-command="DISM /Online /Cleanup-Image /StartComponentCleanup">📋 Copiar</button>
+  <button class="download-btn" data-command="DISM /Online /Cleanup-Image /StartComponentCleanup">⬇️ Baixar .BAT</button>
+</div>
+
+
+    </section>
+
+   <section id="commandScript">
+      <h2>Gerar Script para Execução</h2>
+      <form id="commandForm">
+        <label><input type="checkbox" name="command" value="sfc /scannow"> sfc /scannow</label><br />
+        <label><input type="checkbox" name="command" value="chkdsk /f /r"> chkdsk /f /r</label><br />
+        <label><input type="checkbox" name="command" value="DISM /Online /Cleanup-Image /RestoreHealth"> DISM</label><br />
+        <label><input type="checkbox" name="command" value="format X:"> format X:</label><br /><br />
+        <button type="button" id="generateScriptBtn">Gerar Script BAT</button>
+      </form>
+    
+      <!-- 🔽 Início das explicações -->
+      <section class="comando-explicacao">
+        <h3>O que faz cada comando:</h3>
+        <ul>
+          <li><strong>sfc /scannow</strong>: Verifica e repara arquivos do sistema corrompidos ou ausentes usando o "Verificador de Arquivos do Sistema".</li>
+          <li><strong>chkdsk /f /r</strong>: Verifica e corrige erros no disco rígido. <code>/f</code> corrige erros e <code>/r</code> tenta recuperar dados em setores defeituosos.</li>
+          <li><strong>DISM</strong>: Repara a imagem do sistema do Windows usada pelo SFC. Use se o <code>sfc</code> não resolver os problemas.</li>
+          <li><strong>format X:</strong>: ⚠️ Apaga todos os dados da unidade X:. Só use se tiver certeza.</li>
+        </ul>
+      </section>
+      
+      <!-- 🔼 Fim das explicações -->
+    
+      <div id="downloadLink" style="display:none;">
+        <a id="downloadButton" href="#">📥 Baixar Script</a>
+      </div>
+      <div id="instructions" style="display:none;">
+        <h3>Instruções:</h3>
+        <p>Clique com o botão direito no script e selecione "Executar como administrador".</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Ferramentas de Diagnóstico - Todos os direitos reservados. | Desenvolvido por <strong>JR Manutenção</strong> - <a href="mailto:jrdias32@gmail.com">jrdias32@gmail.com</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

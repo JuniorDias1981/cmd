@@ -1,0 +1,230 @@
+/* Reset básico */
+body, h1, h2, h3, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  padding: 0 20px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #000;
+  background-color: #fff;
+  object-fit: cover;
+}
+
+header h1 {
+  color: #ff4444;
+}
+
+/* Alertas */
+/* Alerta de segurança destacado */
+.alerta-seguranca {
+  background-color: #ff4d4d;
+  color: white;
+  font-weight: bold;
+  padding: 16px;
+  border-radius: 8px;
+  border: 2px solid #cc0000;
+  margin: 20px 0;
+  box-shadow: 0 0 10px rgba(204, 0, 0, 0.6);
+  max-width: 700px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Containers de comandos */
+.command-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.command {
+  background-color: #1b1b1b;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+/* Estilo tipo terminal */
+.cmd-box {
+  background-color: #111;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+}
+
+/* Botões */
+.copy-btn,
+.download-btn {
+  background-color: #2e8b57;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  margin-right: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+}
+
+.copy-btn:hover,
+.download-btn:hover {
+  background-color: #3cb371;
+}
+
+/* Seção de gerar script */
+#commandScript {
+  background-color: #282828;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#commandScript h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #ffa500;
+}
+
+#commandForm label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+#generateScriptBtn {
+  background-color: #4444ff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#generateScriptBtn:hover {
+  background-color: #6666ff;
+}
+
+/* Link para download */
+#downloadLink {
+  margin-top: 15px;
+  text-align: center;
+}
+
+#downloadLink a {
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Instruções */
+#instructions {
+  margin-top: 10px;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 4px;
+  color: #ffff66;
+  font-size: 0.95em;
+}
+
+/* Tabela de memória */
+.memory-type-info {
+  margin: 15px 0;
+}
+
+.memory-type-info table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.memory-type-info th, .memory-type-info td {
+  border: 1px solid #555;
+  padding: 8px;
+  text-align: left;
+}
+
+.memory-type-info th {
+  background-color: #444;
+}
+
+.comando-explicacao {
+  max-width: 800px;
+  margin: 2em auto;
+  padding: 1.5em;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.comando-explicacao h3 {
+  text-align: center;
+  margin-bottom: 1em;
+  color: #222;
+}
+
+.comando-explicacao ul {
+  list-style: disc;
+  padding-left: 2em;
+}
+
+.comando-explicacao li {
+  margin-bottom: 1em;
+  line-height: 1.6;
+}
+
+.comando-explicacao code {
+  background-color: #eee;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  background-color: #2c2c2c;
+  font-size: 0.9em;
+  color: #999;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
